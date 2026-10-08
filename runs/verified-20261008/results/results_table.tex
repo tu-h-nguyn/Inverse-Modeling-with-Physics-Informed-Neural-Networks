@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Inverse PINN for the 1D heat equation: mean $\pm$ standard deviation over 3 seeds.}
+\label{tab:inverse-pinn-heat}
+\begin{tabular}{llcccc}
+\toprule
+Experiment & Setting & $|\hat\alpha-\alpha|/\alpha$ & Rel.\ $L^2$ error & Residual MSE & Runtime [s] \\
+\midrule
+Noise level & 0\% noise & $(4.11 \pm 2.28)\times 10^{-3}$ & $(4.05 \pm 2.04)\times 10^{-3}$ & $(3.12 \pm 1.55)\times 10^{-5}$ & $278.9 \pm 44.3$ \\
+ & 1\% noise & $(3.60 \pm 1.66)\times 10^{-3}$ & $(4.24 \pm 1.82)\times 10^{-3}$ & $(3.15 \pm 1.59)\times 10^{-5}$ & $268.6 \pm 121.2$ \\
+ & 5\% noise & $(3.23 \pm 1.90)\times 10^{-3}$ & $(7.42 \pm 2.18)\times 10^{-3}$ & $(3.03 \pm 1.51)\times 10^{-5}$ & $273.8 \pm 56.2$ \\
+\midrule
+Number of observations & $N_{\mathrm{obs}}$ = 20 & $(1.40 \pm 1.74)\times 10^{-2}$ & $(1.06 \pm 1.18)\times 10^{-2}$ & $(3.34 \pm 1.69)\times 10^{-5}$ & $435.4 \pm 146.8$ \\
+ & $N_{\mathrm{obs}}$ = 50 & $(3.60 \pm 1.66)\times 10^{-3}$ & $(4.24 \pm 1.82)\times 10^{-3}$ & $(3.15 \pm 1.59)\times 10^{-5}$ & $268.6 \pm 121.2$ \\
+ & $N_{\mathrm{obs}}$ = 100 & $(2.78 \pm 1.53)\times 10^{-3}$ & $(4.10 \pm 2.25)\times 10^{-3}$ & $(2.69 \pm 1.22)\times 10^{-5}$ & $507.1 \pm 15.3$ \\
+\midrule
+Loss weights & balanced (1,1,1,1) & $(3.60 \pm 1.66)\times 10^{-3}$ & $(4.24 \pm 1.82)\times 10^{-3}$ & $(3.15 \pm 1.59)\times 10^{-5}$ & $268.6 \pm 121.2$ \\
+ & data-heavy (1,1,1,10) & $(1.11 \pm 1.31)\times 10^{-3}$ & $(4.36 \pm 0.37)\times 10^{-3}$ & $(4.99 \pm 0.91)\times 10^{-5}$ & $335.6 \pm 26.3$ \\
+ & physics-heavy (10,1,1,1) & $(1.03 \pm 0.28)\times 10^{-1}$ & $(6.24 \pm 1.48)\times 10^{-2}$ & $(3.02 \pm 0.54)\times 10^{-5}$ & $287.5 \pm 59.1$ \\
+ & physics-light (0.1,1,1,1) & $(1.77 \pm 0.94)\times 10^{-3}$ & $(2.79 \pm 0.54)\times 10^{-3}$ & $(1.32 \pm 0.58)\times 10^{-4}$ & $356.2 \pm 32.4$ \\
+\midrule
+Optimizer & Adam & $(3.60 \pm 1.66)\times 10^{-3}$ & $(4.24 \pm 1.82)\times 10^{-3}$ & $(3.15 \pm 1.59)\times 10^{-5}$ & $268.6 \pm 121.2$ \\
+ & Adam + L-BFGS & $(2.13 \pm 2.21)\times 10^{-3}$ & $(2.94 \pm 1.94)\times 10^{-3}$ & $(1.91 \pm 2.01)\times 10^{-5}$ & $369.0 \pm 90.8$ \\
+\bottomrule
+\end{tabular}
+\end{table}

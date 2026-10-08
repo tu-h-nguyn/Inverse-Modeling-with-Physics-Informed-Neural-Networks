@@ -1,0 +1,23 @@
+{
+  "loss_leakage_check": "passed",
+  "input_edge_cases": [
+    {
+      "configuration": {
+        "n_obs": 1
+      },
+      "outcome": "AssertionError: obs.u contains NaN/Inf"
+    },
+    {
+      "configuration": {
+        "n_colloc": 0
+      },
+      "outcome": "RuntimeError: min(): Expected reduction dim to be specified for input.numel() == 0. Specify the reduction dim with the 'dim' argument."
+    },
+    {
+      "configuration": {
+        "n_bc": 0
+      },
+      "outcome": "RuntimeError: min(): Expected reduction dim to be specified for input.numel() == 0. Specify the reduction dim with the 'dim' argument."
+    }
+  ]
+}

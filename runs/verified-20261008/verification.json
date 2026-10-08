@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "original_code_cells_completed": 18,
+  "total_code_cells_completed": 20,
+  "error_outputs": 0,
+  "sweep_rows": 36,
+  "summary_groups": 12,
+  "unique_sweep_configs": 27,
+  "png_figures": 6,
+  "baseline_acceptance": "passed",
+  "checkpoint_and_fields": "passed",
+  "csv_reaggregation": "passed",
+  "source_integrity": "passed",
+  "lbfgs": [
+    {
+      "seed": 0,
+      "status": "ok",
+      "evaluations": 18
+    },
+    {
+      "seed": 1,
+      "status": "ok",
+      "evaluations": 688
+    },
+    {
+      "seed": 2,
+      "status": "ok",
+      "evaluations": 10
+    }
+  ],
+  "reference_max_absolute_difference_excluding_runtime": {
+    "alpha": 0.0,
+    "alpha_rel_err": 0.0,
+    "field_mse": 0.0,
+    "field_rel_l2": 0.0,
+    "residual_mse": 0.0,
+    "alpha_crlb_rel": 0.0
+  }
+}
